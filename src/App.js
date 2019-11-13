@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import WeatherInfo from "./components/WeatherInfo";
 import WeatherForm from "./components/WeatherForm";
 import { WEATHER_KEY , BABLACAR_KEY} from "./keys";
+import MyMapComponent from "./components/Map";
 import BlablacarInfo from "./components/BlablacarInfo";
 class App extends Component {
 
@@ -77,6 +78,7 @@ class App extends Component {
              getWeather={this.getWeather}
             />
             <WeatherInfo {...this.state}/>
+            <MyMapComponent />
           </div>
           <div className="col-md-6">
             <BlablacarInfo {...this.state} />
