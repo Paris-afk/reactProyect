@@ -56,15 +56,28 @@ const WeatherForm = props => (
 
       </div>
 
+      <div className="form-group">
+       <input name="travelType" id="travelType" className="btn btn-primary" type="radio" value="1"/>Aller
+      </div>
+       {    <div className="form-group">
+       <input name="travelType" id="travelType" className="btn btn-primary" type="radio" value="2"/>Aller Retour
+      </div>}
 
-{/*       <div className="form-group">
+ 
+         
+     
+
+      <div className="form-group">
         <label htmlFor="">Arrival Date</label>
         <input type="date"
           name="dateArrival" 
           id="dateArrival"
-          className="form-control"/>
+          className="form-control"
+          />
 
-      </div> */}
+      </div>
+
+
 
 
 

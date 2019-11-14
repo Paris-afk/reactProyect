@@ -1,25 +1,25 @@
 import React from 'react';
 
-const BlablacarInfo = props =>{
-    console.log(`ESTE ES EL BUENO `)
+const BlablacarRetour = props =>{
+    console.log(`ESTE ES EL REGRESO `)
     console.log(props)
 
-            if(props.datos !== undefined){
-                console.log(props.datos.trips[1].arrival_place.city_name)
-                console.log(props.datos.trips[1].arrival_place.address)
+            if(props.datosRetour !== undefined){
+                console.log(props.datosRetour.trips[1].arrival_place.city_name)
+                console.log(props.datosRetour.trips[1].arrival_place.address)
                 console.log('----------------------')
-                console.log(props.datos.trips[1].departure_place.city_name)
-                console.log(props.datos.trips[1].departure_place.address)
+                console.log(props.datosRetour.trips[1].departure_place.city_name)
+                console.log(props.datosRetour.trips[1].departure_place.address)
                 return (
                     <ul className="list-unstyled">
-                       {props.datos.trips.map((Viajes)=>{
+                       {props.datosRetour.trips.map((Viajes)=>{
                            
                            return(
-                             
+                               
                                <li
-                               >  
-                                 <h1>Aller</h1> 
-                                 <div className="alert alert-info">
+                               > 
+                                    <h1>Retour</h1>
+                                  <div className="alert alert-info">
                                     <h3>ARRIVE À</h3>
                                     <h4>{Viajes.arrival_place.city_name}</h4>
                                     <p>{Viajes.arrival_place.address}</p>
@@ -47,7 +47,7 @@ const BlablacarInfo = props =>{
 
                 return(
                     <div>
-                        <h1>Il n'y a pas de renseignements </h1>
+                        <h1>Vous n'avez pas chois un retour</h1>
                     </div>
                 )
             }
@@ -58,4 +58,4 @@ const BlablacarInfo = props =>{
 
 
 
-export default BlablacarInfo;
+export default BlablacarRetour;
