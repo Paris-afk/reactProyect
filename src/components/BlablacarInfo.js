@@ -2,21 +2,21 @@ import React from 'react';
 
 const BlablacarInfo = props =>{
     console.log(`ESTE ES EL BUENO `)
-    console.log(props)
+    /* console.log(props) */
 
             if(props.datos !== undefined){
-                console.log(props.datos.trips[1].arrival_place.city_name)
+               /*  console.log(props.datos.trips[1].arrival_place.city_name)
                 console.log(props.datos.trips[1].arrival_place.address)
                 console.log('----------------------')
                 console.log(props.datos.trips[1].departure_place.city_name)
-                console.log(props.datos.trips[1].departure_place.address)
+                console.log(props.datos.trips[1].departure_place.address */
                 return (
                     <ul className="list-unstyled">
-                       {props.datos.trips.map((Viajes)=>{
+                       {props.datos.trips.map((Viajes , i)=>{
                            
                            return(
                              
-                               <li
+                               <li key ={i}
                                >  
                                  <h1>Aller</h1> 
                                  <div className="alert alert-info">

@@ -83,7 +83,7 @@ const WeatherForm = props => (
 
 
 
-      <button className="btn btn-success btn-block">Avoir la temperatur</button>
+      <button className="btn btn-success btn-block">Voir les voyages</button>
     </form>
   </div>
 );

@@ -2,21 +2,21 @@ import React from 'react';
 
 const BlablacarRetour = props =>{
     console.log(`ESTE ES EL REGRESO `)
-    console.log(props)
+   /*  console.log(props) */
 
             if(props.datosRetour !== undefined){
-                console.log(props.datosRetour.trips[1].arrival_place.city_name)
+              /*   console.log(props.datosRetour.trips[1].arrival_place.city_name)
                 console.log(props.datosRetour.trips[1].arrival_place.address)
                 console.log('----------------------')
                 console.log(props.datosRetour.trips[1].departure_place.city_name)
-                console.log(props.datosRetour.trips[1].departure_place.address)
+                console.log(props.datosRetour.trips[1].departure_place.address) */
                 return (
                     <ul className="list-unstyled">
-                       {props.datosRetour.trips.map((Viajes)=>{
+                       {props.datosRetour.trips.map((Viajes , i )=>{
                            
                            return(
                                
-                               <li
+                               <li key={i}
                                > 
                                     <h1>Retour</h1>
                                   <div className="alert alert-info">

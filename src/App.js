@@ -5,6 +5,7 @@ import { WEATHER_KEY , BABLACAR_KEY} from "./keys";
 import MyMapComponent from "./components/Map";
 import BlablacarInfo from "./components/BlablacarInfo";
 import BlablacarRetour from "./components/BlablacarRetour";
+import Map from "./mapa/carte"
 class App extends Component {
 
   state = {
@@ -55,13 +56,13 @@ class App extends Component {
 
     const respuesta = await fetch (API_BLABLACAR);
     const datos = await  respuesta.json();
-    console.log(datos)
-    console.log(`Esta es la fecha de partida ${dateDepartValue}`)
+   /*  console.log(datos)
+    console.log(`Esta es la fecha de partida ${dateDepartValue}`) */
 
     
     const respuesta1 = await fetch (API_BLABLACARretour);
     const datos1 = await  respuesta1.json();
-    console.log(`REGRESO ${datos1}`)
+   /*  console.log(`REGRESO ${datos1}`) */
     
   
 
@@ -105,11 +106,11 @@ class App extends Component {
   };
 
   render() {
-    if(this.getWeather.travelTypeValue = 1){
+    /* if(this.getWeather.travelTypeValue = 1){
       console.log(`es solo ida`)
     }else{
       console.log(`es regreso `)
-    }
+    } */
     return (
       <div className="container p-4">
         <div className="row">
@@ -119,7 +120,8 @@ class App extends Component {
              getWeather={this.getWeather}
             />
             <WeatherInfo {...this.state}/>
-            <MyMapComponent />
+           {/*  <MyMapComponent /> */}
+            <Map />
           </div>
           <div className="col-md-4">
             <BlablacarInfo {...this.state} />
